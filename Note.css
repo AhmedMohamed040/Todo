@@ -1,0 +1,217 @@
+body {
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.note {
+    width: 470px;
+    height: 590px;
+    border-left: 50px solid #4E3025;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 1), inset 0 0 0 1000px #CAA882;
+    transition: all 0.4s cubic-bezier(0.37, 0.26, 0.109, 0.2);
+    padding: 20px;
+    margin: auto;
+}
+
+.note:hover {
+    box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 0.9), inset 0 0 0 1000px #AF8365;
+}
+
+
+/*style h1 */
+
+#name {
+    color: #4E3025;
+    font-size: 50px;
+}
+
+
+/* input style */
+
+#theText {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 11px;
+    font-family: 'Nerko One', cursive;
+    padding-left: 34px;
+    float: left;
+    font-size: 16px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+/*header style*/
+
+.note .header {
+    position: absolute;
+    font-family: 'Nerko One', cursive;
+    color: white;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.note .header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.note .header .add {
+    /* Style Add button*/
+    padding: 10px;
+    width: 25%;
+    font-family: 'Nerko One', cursive;
+    background: #A15937;
+    color: #F5F2F1;
+    float: left;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    top: 0;
+    font-family: "Lucida Console", Courier, monospace;
+    color: #F5F2F1;
+    transition: 0.5s;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    color: #cfcfcf;
+}
+
+#NoteUL {
+    border-radius: 7px;
+    border-top: 7px solid #4E3025;
+    bottom: 50px;
+    text-align: center;
+    position: absolute;
+    width: 380px;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #F5F2F1;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*scrollbar */
+
+#NoteUL::-webkit-scrollbar {
+    width: 10px;
+}
+
+#NoteUL::-webkit-scrollbar-track {
+    background: #F5F2F1;
+}
+
+#NoteUL::-webkit-scrollbar-thumb {
+    background: #4E3025;
+}
+
+ ::placeholder {
+    color: #A15937;
+    opacity: 0.7;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #A15937;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #A15937;
+}
+
+ul li {
+    cursor: pointer;
+    font-family: 'Nerko One', cursive;
+    position: relative;
+    padding: 12px;
+    list-style-type: none;
+    background: #a159374d;
+    font-size: 18px;
+    transition: 0.5s;
+    color: #4E3025;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background: #caa882bb;
+    color: #4E3025;
+}
+
+ul li:nth-child(odd):hover {
+    background: #CAA882;
+    color: #4e30258e;
+}
+
+ul li:hover {
+    background: #a1593771;
+    color: #4e30258e;
+}
+
+
+/*when checked the item*/
+
+ul li.checked {
+    background: #A15937;
+    color: #F5F2F1;
+    text-decoration: line-through #A15937;
+}
+
+ul li.checked:nth-child(odd) {
+    background: #CAA882;
+    color: #F5F2F1;
+}
+
+.close2 {
+    color: #F5F2F1;
+}
+
+
+/* Add a "checked" mark when clicked on */
+
+.checkbox {
+    float: left;
+    margin-right: 10px;
+}
+
+
+/*
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #F5F2F1;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}*/
